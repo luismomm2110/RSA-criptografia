@@ -89,21 +89,4 @@ public class TextChunk {
 		}
 		return blockSize / 8;
 	}
-
-	/** test program */
-	public static void main(String[] args) {
-		String test = "asdfasdf232435@#%@";
-		TextChunk chunk1 = new TextChunk(test);
-		BigInteger n = chunk1.bigIntValue();
-		System.out.println("biginteger value of " + test + " = " + n);
-		System.out.println("blocksize for that is " + blockSize(n));
-		TextChunk chunk2 = new TextChunk(n);
-		String s = chunk2.toString();
-		System.out.println("converted back to string = " + s);
-		if (s.compareTo(test) == 0) {
-			System.out.println("success");
-		} else {
-			System.out.println("FAIL");
-		}
-	}
 }

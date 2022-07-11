@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets
 import commons.IOHelper
 
 object Decriptar extends App {
-  println("Insira o nome do arquivo com a chave privada: ")
+  println("Oi, Alice. Insira o nome do arquivo com a chave privada: ")
   val fileKeys = readLine()
   val keyLines = IOHelper.openFile(fileKeys)
   val module = new BigInteger(keyLines.head)
@@ -32,7 +32,7 @@ object Decriptar extends App {
   )
 
   println(
-    "Insira o nome do arquivo para armazenar o texto descriptografrado.\n O caminho de destino é relativo à pasta resource: "
+    "Insira o nome do arquivo para armazenar o texto descriptografado.\n O caminho de destino é relativo à pasta resource: "
   )
   val destFile = readLine()
 
