@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets
 import commons.IOHelper
 
 object Decriptar extends App {
-  println("Oi, Alice. Insira o nome do arquivo com a chave privada: ")
+  println("Oi, Alice. Insira o nome do arquivo com a chave: ")
   val fileKeys = readLine()
   val keyLines = IOHelper.openFile(fileKeys)
   val module = new BigInteger(keyLines.head)

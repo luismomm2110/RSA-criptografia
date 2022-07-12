@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets
 
 object Encriptar extends App {
 
-  println("Oi, Bob. Insira o nome do arquivo com a chave publica: ")
+  println("Oi, Bob. Insira o nome do arquivo com a chave: ")
   val fileKeys = readLine()
   val keyLines = IOHelper.openFile(fileKeys)
   val module = new BigInteger(keyLines.head)
